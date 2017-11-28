@@ -51,7 +51,7 @@ public class RobotsActivity extends AppCompatActivity {
                 String type = c.getString("robot_type");
                 Log.e("JSON Parser name", name);
 
-                robots.add(new robotsModel(id+name+type));
+                robots.add(new robotsModel(id,name,type));
             }
 
             CustomCryptoAdapter adapter = new CustomCryptoAdapter(this, robots);

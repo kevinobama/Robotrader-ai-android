@@ -8,20 +8,24 @@ import java.util.ArrayList;
 public class robotsModel {
 
     //declare private data instead of public to ensure the privacy of data field of each class
+    private String id;
     private String name;
-//    private String country;
-//    private String buy;
-//    private String sell;
+    private String robot_type;
 
-    public robotsModel(String name) {
+    public robotsModel(String id,String name,String robot_type) {
+        this.id = id;
         this.name = name;
-//        this.country = country;
-//        this.buy = buy;
-//        this.sell = sell;
+        this.robot_type = robot_type;
     }
 
+    public String getId(){
+        return id;
+    }
     public String getName(){
         return name;
+    }
+    public String getRobotType(){
+        return robot_type;
     }
 
 }

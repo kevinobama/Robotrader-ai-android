@@ -28,15 +28,14 @@ public class CustomCryptoAdapter extends ArrayAdapter<robotsModel> {
         // Get the data item for this position
         robotsModel robotsModel1 = getItem(position);
 
+        TextView Id = (TextView) convertView.findViewById(R.id.Id);
         TextView nameText = (TextView) convertView.findViewById(R.id.name);
-//        TextView country = (TextView) convertView.findViewById(R.id.country);
-//        TextView buy = (TextView) convertView.findViewById(R.id.buy);
-//        TextView sell = (TextView) convertView.findViewById(R.id.sell);
+        TextView type = (TextView) convertView.findViewById(R.id.type);
 
         nameText.setText(robotsModel1.getName());
-//        country.setText(exchange.getCountry());
-//        buy.setText(exchange.getBuy());
-//        sell.setText(exchange.getSell());
+
+        Id.setText(robotsModel1.getId());
+        type.setText(robotsModel1.getRobotType());
 
         return convertView;
     }
